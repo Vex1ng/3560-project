@@ -3,6 +3,8 @@ package Skeleton;
 public class Unit {
 
     private int unitID; // unique ID of the unit
+    private int queueID; // queue ID of the unit
+    private int personelID; // personel ID of the unit
     private String status; // current status of the unit 
     private String address; // current address of the unit
     private int assignedIncidentID; // ID of the incident this unit is assigned to
@@ -18,6 +20,16 @@ public class Unit {
     // gets the unit ID
     public int getUnitID() {
         return unitID;
+    }
+
+    // gets the queue ID
+    public int getQueueID() {
+        return queueID;
+    }
+
+     // gets the personel ID
+    public int getPersonelID() {
+        return personelID;
     }
 
     // gets the status of the unit
@@ -38,6 +50,16 @@ public class Unit {
     // sets the unit ID
     public void setUnitID(int unitID) {
         this.unitID = unitID;
+    }
+
+    // sets the queue ID
+    public void setQueueID(int queueID) {
+        this.queueID = queueID;
+    }
+
+    // sets the personel ID
+    public void setPersonelID(int personelID) {
+        this.personelID = personelID;
     }
 
     // sets the status of the unit
