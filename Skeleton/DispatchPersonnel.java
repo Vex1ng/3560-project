@@ -11,9 +11,10 @@ public class DispatchPersonnel {
     private int phoneNumber; // phone number of the personnel
 
     // creates a DispatchPersonnel object and defines all variables above
-    public DispatchPersonnel(int personnelID, String firstName, String lastName, String department, String position) {
+    public DispatchPersonnel(int personnelID, int unitID, String firstName, String lastName, String department, String position) {
 
         this.personnelID = personnelID;
+        this.unitID = unitID;
         this.firstName = firstName;
         this.lastName = lastName;
         this.department = department;

@@ -2,15 +2,19 @@ package Skeleton;
 public class Incident {
 
     private int incidentID; // key identifier for the incident
+    private int callerID; // foreign key from caller
+    private int reportID; // foreign key from report
     private String incidentType; // classifies the type of incidnet
     private int severity; // integer represetning the severity of the incident
     private String address; // physical address of the incident
     private String status; // classifies the status of the incident
 
     // creates an Incident object and defines all variables above
-    public Incident(int incidentID, String incidentType, int severity, String address, String status) {
+    public Incident(int incidentID, int callerID, int reportID, String incidentType, int severity, String address, String status) {
 
         this.incidentID = incidentID;
+        this.callerID = callerID;
+        this.reportID = reportID;
         this.incidentType = incidentType;
         this.severity = severity;
         this.address = address;
@@ -21,6 +25,16 @@ public class Incident {
     // sets the incident ID
     public void setIncidentID(int newIncidentID) {
         incidentID = newIncidentID;
+    }
+
+    // set the caller ID
+    public void setCallerID(int newCallerID) {
+        callerID = newCallerID;
+    }
+
+    // set report ID
+    public void setReportID(int newReportID) {
+        reportID = newReportID; 
     }
 
     // sets the incident type
@@ -46,6 +60,16 @@ public class Incident {
     // gets the incident ID
     public int getIncidentID() {
         return incidentID;
+    }
+
+    // get the caller ID
+    public int getCallerID() {
+        return callerID;
+    }
+
+    // get the reportID
+    public int getReportID() {
+        return reportID;
     }
 
     // gets the incident type

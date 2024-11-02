@@ -1,5 +1,5 @@
 package Skeleton;
-public class PriorityQueue {
+public class PriorityQueueInstance {
 
     private int queueID; // Key for the Priority Queue
     private int unitID; // Key for the assigned unit
@@ -7,8 +7,8 @@ public class PriorityQueue {
     private int priorityLevel; // Representation of the priority of this incident
     private int timeAdded; // Time incident was added
 
-    // Creates a PriorityQueue object and defines all variables above
-    public PriorityQueue(int queueID, int unitID, int incidentID, int priorityLevel, int timeAdded) {
+    // Creates a PriorityQueueInstance object and defines all variables above
+    public PriorityQueueInstance(int queueID, int unitID, int incidentID, int priorityLevel, int timeAdded) {
         this.queueID = queueID;
         this.unitID = unitID;
         this.incidentID = incidentID;
