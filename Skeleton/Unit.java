@@ -10,8 +10,10 @@ public class Unit {
     private int assignedIncidentID; // ID of the incident this unit is assigned to
 
     // creates a Unit object and defines all variables above
-    public Unit(int unitID, String status, String address) {
+    public Unit(int unitID, int queueID, int personelID, String status, String address) {
         this.unitID = unitID;
+        this.queueID = queueID;
+        this.personelID = personelID;
         this.status = status;
         this.address = address;
         this.assignedIncidentID = -1; // default to -1 when no incident is assigned
