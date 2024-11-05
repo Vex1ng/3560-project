@@ -1,3 +1,4 @@
-export const SUPABASE_URL = process.env.SUPABASE_URL || "missing SUPABASE_URL";
-export const SUPABASE_ANON_KEY =
-  process.env.SUPABASE_ANON_KEY || "missing SUPABASE_ANONKEY";
+export const MYSQL_HOST = "localhost";
+export const MYSQL_USER = "root";
+export const MYSQL_PASSWORD = "mysql";
+export const MYSQL_DATABASE = "mysql";
