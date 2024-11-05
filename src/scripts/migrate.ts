@@ -5,6 +5,10 @@ import ora from "ora";
 
 const spinner = ora("Running migrations..");
 
+/**
+ * Helper function for apply migrations
+ * @param {string} filename - the file within the migrations directory 
+ */
 const applyMigration = async (filename: string) => {
   spinner.text = `Applying ${filename}...`;
   try {
@@ -30,7 +34,9 @@ const run = async () => {
     let rows = (await query(
       "SELECT Name from migrations; START TRANSACTION;",
     )) as any;
-    rows = JSON.parse(JSON.stringify(rows));
+
+    // type gymnastics
+    rows = JSON.parse(JSON.stringify(rows))[0]; // 1st row is the actual returned results
     rows = rows.map((row: any) => row.Name);
 
     const migrations = fs.readdirSync("./migrations");
