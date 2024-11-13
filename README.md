@@ -27,7 +27,14 @@ To start the database container, run the following command:
 npm run db:start
 ```
 
-Then visit [localhost](http://localhost:8080) to view the db. The username and password are both `mysql`.
+Then visit [localhost](http://localhost:8080) to view the db.
+
+To log in, set the following fields and press "Login":
+- System: `MySQL`
+- Server: `db`
+- Username: `root`
+- Password: `mysql`
+- Database: `mysql`
 
 ## Learn More
 
