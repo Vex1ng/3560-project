@@ -11,7 +11,7 @@ CREATE TABLE callers (
     first_name VARCHAR(50),
     last_name VARCHAR(50),
     address VARCHAR(250),
-    phone_number VARCHAR(15),
+    phone_number VARCHAR(15)
 
 );
 
@@ -44,6 +44,6 @@ CREATE TABLE dispatch (
     backup_needed BOOLEAN DEFAULT FALSE,
     report TEXT,
     dispatched_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FORIEGN KEY (incident_ID) REFERENCES incidents(incident_ID)
+    FOREIGN KEY (incident_ID) REFERENCES incidents(incident_ID)
 
 );
