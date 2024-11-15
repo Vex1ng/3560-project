@@ -20,11 +20,15 @@ CREATE TABLE DispatchPersonnel (
 -- table designated to storing incident information
 CREATE TABLE Incident (
     incident_ID INT AUTO_INCREMENT PRIMARY KEY,
+    caller_ID INT,
+    personnel_ID INT,
     address VARCHAR(250),
     priority ENUM('Low', 'Medium', 'High', 'Critical') NOT NULL,
     status ENUM('Pending', 'In Progress', 'Resolved') DEFAULT 'Pending',
     description TEXT NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (caller_ID) REFERENCES Caller(caller_ID), 
+    FOREIGN KEY (personnel_ID) REFERENCES DispatchPersonnel(personnel_ID)
 );
 
 -- table designated to storing assignment information 
