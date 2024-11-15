@@ -1,3 +1,4 @@
+import Button from "./Button";
 import NavbarItem from "./NavbarItem";
 
 export default function Navbar() {
@@ -7,6 +8,7 @@ export default function Navbar() {
       <div className="flex flex-row gap-x-20 items-center">
         <NavbarItem href="/" text="Active Reports" />
         <NavbarItem href="/reports" text="Public Reports" />
+        <Button label="Logout" />
       </div>
     </div>
   );
