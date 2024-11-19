@@ -1,8 +1,9 @@
 -- This database is designed to manage and store information for the dispatch system
 CREATE DATABASE IF NOT EXISTS dispatch_system;
+USE dispatch_system;
 
 -- table designated to storing caller information
-CREATE TABLE Caller (
+CREATE TABLE IF NOT EXISTS Caller (
     caller_ID INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(50) NOT NULL,
     last_name VARCHAR(50) NOT NULL,
@@ -11,14 +12,14 @@ CREATE TABLE Caller (
 );
 
 -- table designated to storing dispatch personnel information
-CREATE TABLE DispatchPersonnel (
+CREATE TABLE IF NOT EXISTS DispatchPersonnel (
     personnel_ID INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(50),
     last_name VARCHAR(50)
 );
 
 -- table designated to storing incident information
-CREATE TABLE Incident (
+CREATE TABLE IF NOT EXISTS Incident (
     incident_ID INT AUTO_INCREMENT PRIMARY KEY,
     caller_ID INT,
     personnel_ID INT,
@@ -32,7 +33,7 @@ CREATE TABLE Incident (
 );
 
 -- table designated to storing assignment information 
-CREATE TABLE Assignment (
+CREATE TABLE IF NOT EXISTS Assignment (
     assignment_ID INT AUTO_INCREMENT PRIMARY KEY,
     incident_ID INT UNIQUE NOT NULL, 
     unit_number INT NOT NULL, 
