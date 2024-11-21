@@ -28,7 +28,7 @@ export default function Modal({ isOpen, setIsOpen }: ModalProps) {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch("/api/reports", {
+      const response = await fetch("/api/incidents", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
